@@ -1,0 +1,2 @@
+insert into Payroll_staff_attributes(amount_to_pay)
+select amount_to_pay from Payroll_run_staff_attributes where staff_id in(select staff_id from Payroll_staff where is_active=1)and attribute_id in(select id from Payroll_attributes where is_loan=0)
